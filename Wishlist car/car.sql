@@ -20,6 +20,7 @@ CREATE TABLE cars (
     name VARCHAR(100) NOT NULL,
     color VARCHAR(50),
     brand VARCHAR(50),
+    picture VARCHAR(255),
     price BIGINT,
     year INT,
     user_id INT,
@@ -42,18 +43,19 @@ VALUES
 ('namdo', '2001-02-14', 'namdo2025', 'namdo@vn.com', 'Vietnam', '0918123123'),
 ('enzo', '1988-12-05', 'enzoF1', 'enzo@it.com', 'Italy', '0888999777');
 
-INSERT INTO cars (name, color, brand, price, year, user_id)
+INSERT INTO cars (name, color, brand, picture, price, year, user_id)
 VALUES
-('Toyota Camry', 'White', 'Toyota', 750000000, 2020, 1),
-('Honda Civic', 'Black', 'Honda', 680000000, 2019, 2),
-('Mazda CX5', 'Red', 'Mazda', 820000000, 2021, 3),
-('Hyundai Tucson', 'Blue', 'Hyundai', 790000000, 2022, 4),
-('Ford Ranger', 'Silver', 'Ford', 910000000, 2018, 5),
-('Nissan Altima', 'Gray', 'Nissan', 850000000, 2020, 6),
-('Kia Seltos', 'Orange', 'Kia', 730000000, 2023, 7),
-('Ferrari 812 ', 'Red', 'Ferrari', 12500000000, 2024, 8),
-('Lamborghini Aventador', 'Yellow', 'Lamborghini', 15000000000, 2023, 9),
-('Bugatti Chiron', 'Blue', 'Bugatti', 67000000000, 2022, 10);
+('Toyota Camry', 'White', 'Toyota','', 750000000, 2020, 1),
+('Honda Civic', 'Black', 'Honda','', 680000000, 2019, 2),
+('Mazda CX5', 'Red', 'Mazda','', 820000000, 2021, 3),
+('Hyundai Tucson', 'Blue', 'Hyundai','', 790000000, 2022, 4),
+('Ford Ranger', 'Silver', 'Ford','', 910000000, 2018, 5),
+('Nissan Altima', 'Gray', 'Nissan','', 850000000, 2020, 6),
+('Kia Seltos', 'Orange', 'Kia','', 730000000, 2023, 7),
+('Ferrari 812 ', 'Red', 'Ferrari','', 12500000000, 2024, 8),
+('Lamborghini Aventador', 'Yellow','', 'Lamborghini', 15000000000, 2023, 9),
+('Bugatti Chiron', 'Blue', 'Bugatti','', 67000000000, 2022, 10);
+
 
 
 
