@@ -53,8 +53,8 @@ body {
     border-radius: 10px;
     border: 1.5px solid #b2acac;
     background: none;
-    width: 100%; /* Thêm: Đảm bảo input luôn chiếm 100% */
-    box-sizing: border-box; /* Thêm: Tính cả padding/border vào width */
+    width: 100%;
+    box-sizing: border-box; 
 }
 
 .form-control:hover {
