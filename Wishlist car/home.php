@@ -25,10 +25,10 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
         }
         .sidebar {
             position: fixed;
-            top: 60px;
-            right: 20px;
+            top: 70px;
+            right: 100px;
             left: auto;
-            width: 340px;
+            width: 300px;
             padding: 15px;
             border-radius: 20px;
             max-height: 95vh;
@@ -57,10 +57,70 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
         .btn-group-custom button {
             margin-right: 5px;
         }
+        .custom-navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+
+    .logout-box {
+        padding: 5px 15px;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 5px;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+    }
+
+    .logout-btn {
+        color: white;
+        text-decoration: none;
+    }
+
+    .top-title {
+        color: white;
+        font-size: 30px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .top-bar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    padding: 8px 15px;
+    background: rgba(255,255,255,0.0);
+    background-image: url('557999897_1382035573925255_4608887295426551651_n.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
     </style>
 </head>
 
 <body>
+<div class="top-bar">
+
+    <div class="logout-box">
+        <a href="login.php" class="logout-btn">Log out</a>
+    </div>
+
+    <div class="top-title">WELCOME TO THE WORLD OF CARS!</div>
+
+</div>
+
 
 <div class="container-fluid" style="padding: 20px;">
 
@@ -99,11 +159,6 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
                             <input type="number" class="form-control" name="year">
                         </div>
 
-                        <div class="form-group">
-                            <label>User ID (Owner):</label>
-                            <input type="number" class="form-control" name="user_id" required>
-                        </div>
-
                         <button type="submit" name="create" class="btn btn-primary btn-block">
                             Create
                         </button>
@@ -113,7 +168,7 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
             </div>
         </div>
         <!-- LIST CAR (bên phải) -->
-        <div class="col-md-8" style="margin-top: 60px; margin-left: 40px;">
+        <div class="col-md-8" style="margin-top: 60px; margin-left: 100px;">
             <h2 class="text-center" style="margin-left: -180px; color: #fff;">WISHLIST CAR</h2>
             <div class="car-container" style="display: flex; flex-wrap: wrap; gap: 15px;">
 
@@ -149,50 +204,6 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
 
 </body>
 
-<?php
-//session_start();
-$navbar = '
-<nav class="navbar navbar-default navbar-fixed-top" 
-     style="background-color: rgba(255,255,255,0.6); border-radius:0;">
-  <div class="container-fluid" style="padding:8px 15px; position: relative;">
-
-    <!-- LOGOUT BOX BÊN PHẢI -->
-    <ul class="nav navbar-nav navbar-right" style="margin-right: 10px;">
-      <li>
-        <a href="login/login.php" 
-           style="
-             border: 2px solid #333;
-             padding: 6px 15px;
-             border-radius: 8px;
-             font-weight: bold;
-             background: rgba(255,255,255,0.8);
-           ">
-          Log out
-        </a>
-      </li>
-    </ul>
-
-    <!-- TIÊU ĐỀ Ở GIỮA -->
-    <div style="
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 8px;
-        font-size: 22px;
-        font-weight: bold;
-        letter-spacing: 2px;
-    ">
-     Welcome to the world of cars!
-    </div>
-
-  </div>
-</nav>
-';
-
-
-echo $navbar;
-echo '<div style="height: 70px;"></div>'; // chống bị đè
-?>
 
 
 <?php
