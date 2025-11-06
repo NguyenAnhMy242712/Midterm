@@ -25,7 +25,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary">Đăng nhập</button>
                         <div class="registration">
-                            <p class="mt-3 mb-0">Chưa có tài khoản? <a href="#">Đăng ký ngay</a></p>
+                            <p class="mt-3 mb-0">Chưa có tài khoản? <a href="registration.php">Đăng ký ngay</a></p>
                         </div>
                     </form>
                 </div>
