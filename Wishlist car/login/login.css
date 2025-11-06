@@ -42,8 +42,12 @@ body {
 .form-control {
     padding: 10px 12px;
     border-radius: 10px;
-    border: 1px solid #ccc;
-    background: rgba(255,255,255,0.4);
+    border: 1.5px solid #b2acac;
+    background: none;
+}
+
+.form-control:hover {
+    background: rgba(255,255,255,0.6);
 }
 
 .form-control:focus {
