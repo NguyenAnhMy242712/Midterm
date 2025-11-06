@@ -1,26 +1,32 @@
 <?php
 session_start();
 
-/* connect to database check user*/
-$con=mysqli_connect('localhost','root');
-mysqli_select_db($con, 'user_car_system');
+$con = mysqli_connect('localhost', 'root', '', 'user_car_system');
 
-/* create variables to store data */
-$name =$_POST['user'];
-$pass =$_POST['password'];
-
-/* select data from DB */
-$s="select * from users where username='$name'&& password='$pass'";
-
-/* result variable to store data */
-$result = mysqli_query($con,$s);
-
-/* check for duplicate names and count records */
-$num =mysqli_num_rows($result);
-if($num==1){
-  /* Storing the username and session */
-    $_SESSION['username'] =$name;
-    header('location:home.php');
-}else{
-    header('location:login.php');
+if (!$con) {
+    die("Connection failed: " . mysqli_connect_error());
 }
+
+$name = mysqli_real_escape_string($con, $_POST['user']);
+$pass = mysqli_real_escape_string($con, $_POST['password']);
+
+$s = "SELECT * FROM users WHERE username='$name' AND password='$pass'";
+
+$result = mysqli_query($con, $s);
+
+if ($result) {
+    $num = mysqli_num_rows($result);
+    if ($num == 1) {
+        $_SESSION['username'] = $_POST['user'];
+        header('location:home.php');
+        exit();
+    } else {
+        header('location:login.php');
+        exit();
+    }
+} else {
+    echo "SQL Error: " . mysqli_error($con);
+}
+
+mysqli_close($con);
+?>
