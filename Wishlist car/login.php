@@ -12,20 +12,20 @@
         <div class="container">
             <div class="login d-flex justify-content-center align-items-center">
                 <div class="login__form">
-                    <h2>Đăng nhập</h2>
+                    <h2>Login</h2>
                     <form action="validation.php" method="post">
                         <div class="form-group login__form--username">
-                            <label for="username" class="form-label">Tên đăng nhập</label>                        
+                            <label for="username" class="form-label">Username</label>                        
                             <input type="text" id="username" name="user" class="form-control" required>
                             
                         </div>
                         <div class="form-group login__form--password">
-                            <label for="password" class="form-label">Mật khẩu</label>
+                            <label for="password" class="form-label">Password</label>
                             <input type="password" id="password" name="password" class="form-control" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                        <button type="submit" class="btn btn-primary">Login</button>
                         <div class="registration">
-                            <p class="mt-3 mb-0">Chưa có tài khoản? <a href="registration.php">Đăng ký ngay</a></p>
+                            <p class="mt-3 mb-0">Already have an account? <a href="registration.php">Registration</a></p>
                         </div>
                     </form>
                 </div>
