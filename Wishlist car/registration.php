@@ -47,11 +47,6 @@
                             <input type="password" id="password" name="password" class="form-control" required>
                         </div>
 
-                        <div class="form-group">
-                            <label for="confirm_password" class="form-label">Confirm Password</label>
-                            <input type="password" id="confirm_password" name="confirm_password" class="form-control" required>
-                        </div>
-
                         <button type="submit" class="btn btn-primary">Register</button>
                         
                         <div class="registration">
