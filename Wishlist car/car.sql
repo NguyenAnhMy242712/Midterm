@@ -28,7 +28,6 @@ CREATE TABLE cars (
         ON UPDATE CASCADE
 );
 
--- Sample data (optional)
 
 INSERT INTO users (username, dob, password, email, nationality, phonenumber)
 VALUES 
@@ -49,4 +48,5 @@ VALUES
 ('Ford Ranger', 'Silver', 'Ford', 910000.00, 2018, 5),
 ('Nissan Altima', 'Gray', 'Nissan', 850000.00, 2020, 6),
 ('Kia Seltos', 'Orange', 'Kia', 730000.00, 2023, 7);
+
 
