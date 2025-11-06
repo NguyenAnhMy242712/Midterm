@@ -15,7 +15,7 @@
             <div class="registration d-flex justify-content-center align-items-center">
                 <div class="registration__form">
                     <h2>Registration</h2>
-                    <form action="handle_registration.php" method="post">
+                    <form action="connect_registration.php" method="post">
                         
                         <div class="form-group">
                             <label for="username" class="form-label">Username</label>                                
