@@ -19,7 +19,7 @@ $dob = $_POST['dob'];
 $nationality = $_POST['nationality'];
 $phone = $_POST['phonenumber'];
 
-// Đã bỏ phần kiểm tra if ($password != $confirm_pass)
+
 
 // "Làm sạch" tất cả dữ liệu để tránh lỗi SQL
 $username_safe = mysqli_real_escape_string($conn, $username);
