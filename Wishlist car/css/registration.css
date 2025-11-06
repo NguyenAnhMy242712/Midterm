@@ -1,22 +1,16 @@
 body {
     background-image: url('https://images.hdqwalls.com/wallpapers/porsche-911-carrera-s-2019-o4.jpg');
     background-size: cover;
-<<<<<<< HEAD
     background-position: center center; 
     background-attachment: fixed;
-=======
     background-attachment: fixed; 
->>>>>>> a88a1692213e83438a2de630234dbdea4f1ac2af
     min-height: 100vh; 
     margin: 0;
     font-family: Helvetica, !important ;
-<<<<<<< HEAD
     padding: 20px 15px; 
     box-sizing: border-box; 
-=======
     padding: 20px 15px;
     box-sizing: border-box;
->>>>>>> a88a1692213e83438a2de630234dbdea4f1ac2af
 }
 
 .registration__form {
@@ -25,11 +19,8 @@ body {
     border-radius: 20px;
     width: 100%;
     max-width: 450px; 
-<<<<<<< HEAD
     box-sizing: border-box; 
-=======
     box-sizing: border-box;
->>>>>>> a88a1692213e83438a2de630234dbdea4f1ac2af
 }
 
 .registration__form h2 {
@@ -96,7 +87,4 @@ body {
 .registration a:hover {
     text-decoration: underline;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> a88a1692213e83438a2de630234dbdea4f1ac2af
