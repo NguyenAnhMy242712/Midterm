@@ -20,7 +20,7 @@ CREATE TABLE cars (
     name VARCHAR(100) NOT NULL,
     color VARCHAR(50),
     brand VARCHAR(50),
-    price DECIMAL(12,2),
+    price BIGINT,
     year INT,
     user_id INT,
     FOREIGN KEY (user_id) REFERENCES users(id)
@@ -54,6 +54,7 @@ VALUES
 ('Ferrari 812 ', 'Red', 'Ferrari', 12500000000, 2024, 8),
 ('Lamborghini Aventador', 'Yellow', 'Lamborghini', 15000000000, 2023, 9),
 ('Bugatti Chiron', 'Blue', 'Bugatti', 67000000000, 2022, 10);
+
 
 
 
