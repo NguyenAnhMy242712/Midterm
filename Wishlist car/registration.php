@@ -12,8 +12,8 @@
 
     <body>
         <div class="container">
-            <div class="login d-flex justify-content-center align-items-center">
-                <div class="login__form">
+            <div class="registration d-flex justify-content-center align-items-center">
+                <div class="registration__form">
                     <h2>Registration</h2>
                     <form action="handle_registration.php" method="post">
                         
