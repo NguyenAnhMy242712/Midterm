@@ -33,9 +33,20 @@ CREATE TABLE cars (
 INSERT INTO users (username, dob, password, email, nationality, phonenumber)
 VALUES 
 ('admin', '1990-01-01', '123456', 'admin@example.com', 'Vietnam', '0123456789'),
-('john', '1995-05-15', 'password123', 'john@gmail.com', 'USA', '0987654321');
+('john', '1995-05-15', 'password123', 'john@gmail.com', 'USA', '0987654321'),
+('lisa', '1998-07-10', 'lisa@123', 'lisa@yahoo.com', 'Canada', '0912345678'),
+('minh', '2000-03-25', 'minhpass', 'minh@gmail.com', 'Vietnam', '0905123123'),
+('alex', '1992-11-30', 'alex321', 'alex@hotmail.com', 'UK', '0845123456'),
+('sakura', '1999-09-09', 'sakura99', 'sakura@jp.com', 'Japan', '0812345678'),
+('maria', '1997-06-18', 'maria18', 'maria@es.com', 'Spain', '0823456789');
 
 INSERT INTO cars (name, color, brand, price, year, user_id)
 VALUES
 ('Toyota Camry', 'White', 'Toyota', 750000.00, 2020, 1),
-('Honda Civic', 'Black', 'Honda', 680000.00, 2019, 2);
+('Honda Civic', 'Black', 'Honda', 680000.00, 2019, 2),
+('Mazda CX5', 'Red', 'Mazda', 820000.00, 2021, 3),
+('Hyundai Tucson', 'Blue', 'Hyundai', 790000.00, 2022, 4),
+('Ford Ranger', 'Silver', 'Ford', 910000.00, 2018, 5),
+('Nissan Altima', 'Gray', 'Nissan', 850000.00, 2020, 6),
+('Kia Seltos', 'Orange', 'Kia', 730000.00, 2023, 7);
+
