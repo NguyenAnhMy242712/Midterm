@@ -24,7 +24,7 @@ $phone = $_POST['phonenumber'];
 // "Làm sạch" tất cả dữ liệu để tránh lỗi SQL
 $username_safe = mysqli_real_escape_string($conn, $username);
 $email_safe = mysqli_real_escape_string($conn, $email);
-$password_safe = mysqli_real_escape_string($conn, $password); // "Làm sạch" mật khẩu gốc
+$password_safe = mysqli_real_escape_string($conn, $password); 
 $dob_safe = mysqli_real_escape_string($conn, $dob);
 $nationality_safe = mysqli_real_escape_string($conn, $nationality);
 $phone_safe = mysqli_real_escape_string($conn, $phone);
