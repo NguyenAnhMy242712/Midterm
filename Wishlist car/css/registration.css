@@ -1,13 +1,9 @@
 body {
     background-image: url('https://images.hdqwalls.com/wallpapers/porsche-911-carrera-s-2019-o4.jpg');
     background-size: cover;
-    background-position: center center;
     background-attachment: fixed; 
     min-height: 100vh; 
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: Helvetica, !important ;
     padding: 20px 15px;
     box-sizing: border-box;
