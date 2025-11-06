@@ -87,17 +87,3 @@ body {
 .registration a:hover {
     text-decoration: underline;
 }
-
-@media (max-width: 480px) {
-    .registration__form {
-        padding: 30px 25px;
-    }
-
-    .registration__form h2 {
-        font-size: 1.9rem;
-    }
-
-    body {
-        padding: 15px 10px; 
-    }
-}
