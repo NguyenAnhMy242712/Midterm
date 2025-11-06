@@ -37,7 +37,7 @@ VALUES
 ('minh', '2000-03-25', 'minhpass', 'minh@gmail.com', 'Vietnam', '0905123123'),
 ('alex', '1992-11-30', 'alex321', 'alex@hotmail.com', 'UK', '0845123456'),
 ('sakura', '1999-09-09', 'sakura99', 'sakura@jp.com', 'Japan', '0812345678'),
-('maria', '1997-06-18', 'maria18', 'maria@es.com', 'Spain', '0823456789'),
+('smallsheep', '2004-04-12', 'yuu47319922', 'maria@es.com', 'Italia', '0961971204'),
 ('khaibeo', '1994-08-22', '890pass', 'khaibeo@us.com', 'Cambodia', '0978123456'),
 ('namdo', '2001-02-14', 'namdo2025', 'namdo@vn.com', 'Vietnam', '0918123123'),
 ('enzo', '1988-12-05', 'enzoF1', 'enzo@it.com', 'Italy', '0888999777');
@@ -54,6 +54,7 @@ VALUES
 ('Ferrari 812 ', 'Red', 'Ferrari', 12500000000, 2024, 8),
 ('Lamborghini Aventador', 'Yellow', 'Lamborghini', 15000000000, 2023, 9),
 ('Bugatti Chiron', 'Blue', 'Bugatti', 67000000000, 2022, 10);
+
 
 
 
