@@ -15,14 +15,11 @@ if (!$conn) {
 $username = $_POST['user'];
 $email = $_POST['email'];
 $password = $_POST['password']; 
-$confirm_pass = $_POST['confirm_password'];
 $dob = $_POST['dob'];
 $nationality = $_POST['nationality'];
 $phone = $_POST['phonenumber'];
 
-if ($password != $confirm_pass) {
-    die("Error: Password and Confirm Password do not match. Please go back."); 
-}
+
 
 $s = "SELECT * FROM users WHERE username='$username'";
 
