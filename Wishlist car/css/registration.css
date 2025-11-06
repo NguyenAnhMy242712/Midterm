@@ -1,24 +1,33 @@
 body {
     background-image: url('https://images.hdqwalls.com/wallpapers/porsche-911-carrera-s-2019-o4.jpg');
     background-size: cover;
-    height: 100vh;
+    background-position: center center; /* Thêm: Đảm bảo ảnh nền luôn canh giữa */
+    background-attachment: fixed; /* Thêm: Giữ ảnh nền cố định khi cuộn */
+    
+    /* THAY ĐỔI 1: Cho phép cuộn khi nội dung dài */
+    min-height: 100vh; /* Từ 'height' thành 'min-height' */
+    
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Helvetica, !important ;
+
+    /* THAY ĐỔI 2: Thêm đệm 2 bên cho body */
+    padding: 20px 15px; /* Thêm 20px đệm trên/dưới, 15px trái/phải */
+    box-sizing: border-box; /* Bắt buộc khi dùng padding trên body */
 }
 
-.login__form {
+.registration__form {
     background: rgba(235, 228, 228, 0.8);
     padding: 40px 35px;
     border-radius: 20px;
     width: 100%;
-
     max-width: 450px; 
+    box-sizing: border-box; /* Thêm: Giúp padding và border hoạt động tốt hơn */
 }
 
-.login__form h2 {
+.registration__form h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #20276f;
@@ -28,16 +37,15 @@ body {
 }
 
 
-.login__form .form-group {
+.registration__form .form-group {
     margin-bottom: 15px; 
 }
-
-
-
 
 .form-label {
     font-weight: 500;
     color: #444;
+    text-align: left; 
+    display: block;
 }
 
 .form-control {
@@ -45,6 +53,8 @@ body {
     border-radius: 10px;
     border: 1.5px solid #b2acac;
     background: none;
+    width: 100%; /* Thêm: Đảm bảo input luôn chiếm 100% */
+    box-sizing: border-box; /* Thêm: Tính cả padding/border vào width */
 }
 
 .form-control:hover {
@@ -61,7 +71,6 @@ body {
     padding: 10px;
     border-radius: 10px;
     font-weight: 600;
-    /* Thêm khoảng cách 10px giữa nút và link bên dưới */
     margin-top: 10px; 
 }
 
@@ -82,4 +91,22 @@ body {
 
 .registration a:hover {
     text-decoration: underline;
+}
+
+/* THAY ĐỔI 3: Thêm Media Query cho màn hình nhỏ */
+@media (max-width: 480px) {
+    .registration__form {
+        /* Giảm padding để có thêm không gian cho nội dung */
+        padding: 30px 25px;
+    }
+
+    .registration__form h2 {
+        /* Giảm cỡ chữ tiêu đề */
+        font-size: 1.9rem;
+    }
+
+    body {
+        /* Giảm đệm body một chút trên màn hình quá nhỏ */
+        padding: 15px 10px; 
+    }
 }
