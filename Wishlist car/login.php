@@ -5,7 +5,7 @@ if (isset($_SESSION['username'])) {
     exit();
 }
 ?>
-<html lang="vi" xmlns="">
+<html lang="en" xmlns="">
     <head>
         <title>Login</title>
         <meta charset="utf-8">
