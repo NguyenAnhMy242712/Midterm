@@ -42,7 +42,6 @@ if (!$link) {
             max-height: 95vh;
             overflow-y: auto;
         }
-
         .car-card {
             display: inline-block;
             vertical-align: top;
@@ -69,7 +68,6 @@ if (!$link) {
             top: 15px;
             right: 20px;
         }
-    
         .logout-btn {
             color: white;
             text-decoration: none;
