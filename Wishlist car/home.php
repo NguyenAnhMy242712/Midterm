@@ -157,7 +157,7 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
 <div class="top-bar">
 
     <div class="logout-box">
-        <a href="login.php" class="logout-btn">Log out</a>
+        <a href="logout.php" class="logout-btn">Log out</a>
     </div>
 
     <div class="top-title">WELCOME TO THE WORLD OF CARS!</div>
