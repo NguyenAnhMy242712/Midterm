@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['username'])) {
+    header("Location: home.php");
+    exit();
+}
+?>
 <html lang="vi" xmlns="">
     <head>
         <title>Login</title>
