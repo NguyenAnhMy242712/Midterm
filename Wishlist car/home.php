@@ -61,23 +61,6 @@ if (!$link) {
         .car-info {
             margin-top: 10px;
         }
-        .btn-group-custom button {
-            margin-right: 5px;
-        }
-        .custom-navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 15px 20px;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-
         .logout-box {
             padding: 5px 15px;
             background-color: rgba(255, 255, 255, 0.6);
@@ -91,7 +74,6 @@ if (!$link) {
             color: white;
             text-decoration: none;
         }
-    
         .top-title {
             color: white;
             font-size: 30px;
