@@ -40,10 +40,9 @@ if (!$link) {
             padding: 15px;
             border-radius: 20px;
             max-height: 95vh;
-            overflow-y: auto; /* Nếu form dài thì chính form sẽ cuộn */
+            overflow-y: auto;
         }
 
-        /* Make car cards align nicely */
         .car-card {
             display: inline-block;
             vertical-align: top;
@@ -159,7 +158,7 @@ if (!$link) {
     
                             <div class="form-group">
                                 <label>Price:</label>
-                                <input type="number" step="0.01" class="form-control" name="price">
+                                <input type="number" step="10000000" class="form-control" name="price">
                             </div>
     
                             <div class="form-group">
@@ -193,7 +192,7 @@ if (!$link) {
                             <p><b>Brand:</b> <?php echo $row['brand']; ?></p>
                             <p><b>Color:</b> <?php echo $row['color']; ?></p>
                             <p><b>Year:</b> <?php echo $row['year']; ?></p>
-                            <p><b>Price:</b> <?php echo number_format($row['price']); ?> USD</p>
+                            <p><b>Price:</b> <?php echo number_format($row['price']); ?> VND</p>
                         </div>
     
                         <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-success btn-sm">Edit</a>
