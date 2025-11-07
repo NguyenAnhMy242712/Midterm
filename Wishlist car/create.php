@@ -31,7 +31,7 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
             </div>
             <div class="form-group">
                 <label for="price">Price:</label>
-                <input type="number" step="0.01" class="form-control" id="price" placeholder="Enter price" name="price">
+                <input type="number" step="10000000" class="form-control" id="price" placeholder="Enter price" name="price">
             </div>
             <div class="form-group">
                 <label for="year">Year:</label>
