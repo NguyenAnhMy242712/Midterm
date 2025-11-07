@@ -45,20 +45,20 @@ VALUES
 
 INSERT INTO cars (name, color, brand, picture, price, year, user_id)
 VALUES
-('Toyota Camry', 'White', 'Toyota', '', 28855, 2020, 1),
-('Honda Civic', 'Black', 'Honda', '', 20350, 2019, 2),
-('Mazda CX5', 'Red', 'Mazda', '', 26595, 2021, 3),
-('Hyundai Tucson', 'Blue', 'Hyundai', '', 24950, 2022, 4),
-('Ford Ranger', 'Silver', 'Ford', '', 27690, 2018, 5),
-('Nissan Altima', 'Gray', 'Nissan', '', 25250, 2020, 6),
-('Kia Seltos', 'Orange', 'Kia', '', 23690, 2023, 7),
-('Ferrari 812 Superfast', 'Red', 'Ferrari', '', 335000, 2024, 8),
-('Lamborghini Aventador', 'Green', 'Lamborghini', '', 507353, 2023, 9),
-('Bugatti Chiron', 'Blue', 'Bugatti', '', 3300000, 2022, 10),
-('Porsche 911', 'Gray', 'Porsche', '', 100550, 2021, 1),
-('Audi A6', 'White', 'Audi', '', 54900, 2021, 6),
-('BMW M4', 'Black', 'BMW', '', 80875, 2023, 7),
-('Mercedes AMG S63 E', 'White', 'Mercedes-Benz', '', 189800, 2024, 8);
+('Toyota Camry', 'White', 'Toyota', 'images1.jpg', 28855, 2020, 1),
+('Honda Civic', 'Black', 'Honda', 'images2.jpg', 20350, 2019, 2),
+('Mazda CX5', 'Red', 'Mazda', 'images3.jpg', 26595, 2021, 3),
+('Hyundai Tucson', 'Blue', 'Hyundai', 'images4.jpeg', 24950, 2022, 4),
+('Ford Ranger', 'Silver', 'Ford', 'images5.jpeg', 27690, 2018, 5),
+('Nissan Altima', 'Gray', 'Nissan', 'images6.jpeg', 25250, 2020, 6),
+('Kia Seltos', 'Orange', 'Kia', 'images7.jpeg', 23690, 2023, 7),
+('Ferrari 812 Superfast', 'Red', 'Ferrari', 'images8.jpeg', 335000, 2024, 8),
+('Lamborghini Aventador', 'Green', 'Lamborghini', 'images9.jpeg', 507353, 2023, 9),
+('Bugatti Chiron', 'Blue', 'Bugatti', 'images10.jepg', 3300000, 2022, 10),
+('Porsche 911', 'Gray', 'Porsche', 'images11.jpeg', 100550, 2021, 1),
+('Audi A6', 'White', 'Audi', 'images12.jpeg', 54900, 2021, 6),
+('BMW M4', 'Black', 'BMW', 'images13.jpeg', 80875, 2023, 7),
+('Mercedes AMG S63 E', 'White', 'Mercedes-Benz', 'images14.jpeg', 189800, 2024, 8);
 
 
 
