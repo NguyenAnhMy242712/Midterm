@@ -43,11 +43,6 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
             max-height: 95vh;
             overflow-y: auto; /* Nếu form dài thì chính form sẽ cuộn */
         }
-<<<<<<< HEAD
-
-        /* Make car cards align nicely */
-=======
->>>>>>> d6130663412535722c0e9471f03f6395b0007af5
         .car-card {
             display: inline-block;
             vertical-align: top;
@@ -66,7 +61,6 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
         }
         /*.car-info {
             margin-top: 10px;
-<<<<<<< HEAD
             background-color: rgba(255, 255, 255, 0.6);
         }*/
         .btn-group-custom button {
@@ -122,8 +116,6 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
         background-attachment: fixed;
         background-position: center;
 }
-=======
-        }
         .logout-box {
             padding: 5px 15px;
             background-color: rgba(255, 255, 255, 0.6);
@@ -158,7 +150,6 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
             background-attachment: fixed;
             background-position: center;
         }
->>>>>>> d6130663412535722c0e9471f03f6395b0007af5
     </style>
 </head>
 
