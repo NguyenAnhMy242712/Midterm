@@ -112,10 +112,8 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
     <a href="logout.php" class="logout-btn" onclick="return confirm('Are you sure you want to logout?')">
         Log out
     </a>
-</div>
-
+    </div>
     <div class="top-title">WELCOME TO THE WORLD OF CARS!</div>
-
 </div>
 
 <div class="row">
@@ -156,7 +154,6 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
                             <label>Image:</label>
                             <input type="file" class="form-control" name="picture" accept="image/*" required>
                         </div>
-
                         <button type="submit" name="create" class="btn btn-primary btn-block">
                             Create
                         </button>
@@ -196,7 +193,6 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
     </div>
 </div>
 </body>
-
 <?php
 // INSERT CAR
 if (isset($_POST["create"])) {
@@ -226,6 +222,4 @@ if (isset($_POST["create"])) {
     echo "<script>alert('New car created successfully!'); window.location='';</script>";
 }
 ?>
-
-
 </html> 
