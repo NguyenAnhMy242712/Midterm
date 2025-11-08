@@ -108,19 +108,11 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
 
 <body>
 <div class="top-bar">
-
     <div class="logout-box">
-        <a href="#" class="logout-btn" onclick="return confirmLogout()">Log out</a>
-        <script>
-        function confirmLogout() {
-            if(confirm('Are you sure you want to logout?')) {
-            window.location.href = 'logout.php';
-            return true;
-            }
-            return false;
-        }
-        </script>
-    </div>
+    <a href="logout.php" class="logout-btn" onclick="return confirm('Are you sure you want to logout?')">
+        Log out
+    </a>
+</div>
 
     <div class="top-title">WELCOME TO THE WORLD OF CARS!</div>
 
