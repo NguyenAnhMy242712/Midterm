@@ -1,53 +1,40 @@
 <?php
 session_start();
-$db_host = "localhost";
-$db_user = "root";
-$db_pass = "";
-$db_name = "user_car_system"; 
 
-$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+/* Kết nối database */
+$con = mysqli_connect('localhost', 'root', '');
+mysqli_select_db($con, "user_car_system");
 
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-// Lấy dữ liệu 
-$username = $_POST['user'];
-$email = $_POST['email'];
-$password = $_POST['password']; 
-$dob = $_POST['dob'];
+/* Lấy dữ liệu từ form */
+$username    = $_POST['user'];
+$email       = $_POST['email'];
+$password    = $_POST['password'];
+$dob         = $_POST['dob'];
 $nationality = $_POST['nationality'];
-$phone = $_POST['phonenumber'];
+$phone       = $_POST['phonenumber'];
 
-
-
-// "Làm sạch" tất cả dữ liệu để tránh lỗi SQL
-$username_safe = mysqli_real_escape_string($conn, $username);
-$email_safe = mysqli_real_escape_string($conn, $email);
-$password_safe = mysqli_real_escape_string($conn, $password); 
-$dob_safe = mysqli_real_escape_string($conn, $dob);
-$nationality_safe = mysqli_real_escape_string($conn, $nationality);
-$phone_safe = mysqli_real_escape_string($conn, $phone);
-
-// KIỂM TRA TRÙNG LẶP
-$s = "SELECT * FROM users WHERE username='$username_safe'";
-$result = mysqli_query($conn, $s);
+/* Kiểm tra username đã tồn tại chưa */
+$s = "SELECT * FROM users WHERE username = '$username'";
+$result = mysqli_query($con, $s);
 $num = mysqli_num_rows($result);
 
-if($num == 1){
-    echo "Username Exists. Please go back and try another one.";
+if ($num == 1) {
+    // Nếu username đã tồn tại
+    echo "<script>
+            alert('Username already exists! Please try another one.');
+            window.location.href = 'registration.php';
+          </script>";
 } else {
-    // Chèn mật khẩu đã "làm sạch" ($password_safe)
-    $reg = "INSERT INTO users (username, email, password, dob, nationality, phonenumber) 
-            VALUES ('$username_safe', '$email_safe', '$password_safe', '$dob_safe', '$nationality_safe', '$phone_safe')";
-    
-    if (mysqli_query($conn, $reg)) {
-        header("Location: login.php");
-        exit(); 
-    } else {
-        echo "Error: " . mysqli_error($conn);
-    }
+    // Nếu username chưa tồn tại thì thêm người dùng mới
+    $reg = "INSERT INTO users (username, email, password, dob, nationality, phonenumber)
+            VALUES ('$username', '$email', '$password', '$dob', '$nationality', '$phone')";
+    mysqli_query($con, $reg);
+
+    echo "<script>
+            alert('Registration successful! Please login.');
+            window.location.href = 'login.php';
+          </script>";
 }
 
-mysqli_close($conn);
+mysqli_close($con);
 ?>
