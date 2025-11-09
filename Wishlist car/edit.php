@@ -29,37 +29,6 @@ $old_picture = $row["picture"]; // Lưu ảnh cũ
 <div class="container">
     <div class="col-lg-4">
         <h2>Car Information Form</h2>
-<<<<<<< Updated upstream
-        <form action="" name="form1" method="post">
-                        <div class="form-group">
-                            <label>Car Name:</label>
-                            <input type="text" class="form-control" name="name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Brand:</label>
-                            <input type="text" class="form-control" name="brand" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Color:</label>
-                            <input type="text" class="form-control" name="color">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Price:</label>
-                            <input type="number" step="1000" class="form-control" name="price">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Year:</label>
-                            <input type="number" class="form-control" name="year">
-                        </div>
-                        <div class="form-group">
-                            <label>Image:</label>
-                            <input type="file" class="form-control" name="picture" accept="image/*" required>
-                        </div>
-=======
 
         <form action="" name="form1" method="post" enctype="multipart/form-data">
 
@@ -98,14 +67,11 @@ $old_picture = $row["picture"]; // Lưu ảnh cũ
                 <label>Current Image:</label><br>
                 <img src="<?php echo $old_picture; ?>" width="150">
             </div>
-
-            <!-- Chọn ảnh mới -->
             <div class="form-group">
                 <label>Upload New Image (optional):</label>
                 <input type="file" class="form-control" name="picture" accept="image/*">
             </div>
 
->>>>>>> Stashed changes
             <button type="submit" name="update" class="btn btn-default">Update</button>
         </form>
 
