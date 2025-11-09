@@ -34,31 +34,34 @@ while ($row = mysqli_fetch_array($res)) {
     <div class="col-lg-4">
         <h2>Car Information Form</h2>
         <form action="" name="form1" method="post">
-            <div class="form-group">
-                <label for="name">Car Name:</label>
-                <input type="text" class="form-control" id="name" name="name"
-                       placeholder="Enter car name" value="<?php echo $name; ?>">
-            </div>
-            <div class="form-group">
-                <label for="brand">Brand:</label>
-                <input type="text" class="form-control" id="brand" name="brand"
-                       placeholder="Enter brand" value="<?php echo $brand; ?>">
-            </div>
-            <div class="form-group">
-                <label for="color">Color:</label>
-                <input type="text" class="form-control" id="color" name="color"
-                       placeholder="Enter color" value="<?php echo $color; ?>">
-            </div>
-            <div class="form-group">
-                <label for="price">Price:</label>
-                <input type="text" class="form-control" id="price" name="price"
-                       placeholder="Enter price" value="<?php echo $price; ?>">
-            </div>
-            <div class="form-group">
-                <label for="year">Year:</label>
-                <input type="number" class="form-control" id="year" name="year"
-                       placeholder="Enter year" value="<?php echo $year; ?>">
-            </div>
+                        <div class="form-group">
+                            <label>Car Name:</label>
+                            <input type="text" class="form-control" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Brand:</label>
+                            <input type="text" class="form-control" name="brand" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Color:</label>
+                            <input type="text" class="form-control" name="color">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Price:</label>
+                            <input type="number" step="1000" class="form-control" name="price">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Year:</label>
+                            <input type="number" class="form-control" name="year">
+                        </div>
+                        <div class="form-group">
+                            <label>Image:</label>
+                            <input type="file" class="form-control" name="picture" accept="image/*" required>
+                        </div>
             <button type="submit" name="update" class="btn btn-default">Update</button>
         </form>
     </div>
