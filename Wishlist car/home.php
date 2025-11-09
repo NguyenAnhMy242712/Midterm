@@ -15,99 +15,12 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
     <meta charset="UTF-8">
     <title>Car List</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <style>
-        body {
-            background-image: url('557999897_1382035573925255_4608887295426551651_n.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-            min-height: 100vh;
-        }
-        .sidebar {
-            position: fixed;
-            top: 70px;
-            right: 100px;
-            left: auto;
-            width: 300px;
-            padding: 15px;
-            border-radius: 20px;
-            max-height: 95vh;
-            overflow-y: auto;
-        }
-        .panel-default {
-            background-color: rgba(255, 255, 255, 0.6);
-            border-radius: 20px;
-        }
-        .text-center{
-            margin-left: -180px; 
-            color: #fff;
-        }
-        .col-md-8 {
-            margin-top: 60px; 
-            margin-left: 100px;
-        }
-        .car-card {
-            display: inline-block;
-            vertical-align: top;
-            width: 260px;
-            background-color: rgba(255, 255, 255, 0.6);
-            padding: 10px; 
-            border-radius: 10px;
-        }
-        .car-card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-        .car-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .btn-group-custom button {
-            margin-right: 5px;
-        }
-        .logout-box {
-            padding: 5px 15px;
-            background-color: rgba(255, 255, 255, 0.6);
-            border-radius: 5px;
-            position: fixed;
-            top: 15px;
-            right: 20px;
-        }
-        .logout-btn {
-            color: white;
-            text-decoration: none;
-        }
-        .top-title {
-            color: white;
-            font-size: 30px;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .top-bar {
-            width: 100%;
-            height: 60px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 9999;
-            padding: 8px 15px;
-            background: rgba(255,255,255,0.0);
-            background-image: url('557999897_1382035573925255_4608887295426551651_n.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/home.css">
 </head>
 
 <body>
-<div class="top-bar">
+<div class="row">
+    <div class="top-bar">
     <div class="logout-box">
     <a href="logout.php" class="logout-btn" onclick="return confirm('Are you sure you want to logout?')">
         Log out
@@ -115,9 +28,6 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
     </div>
     <div class="top-title">WELCOME TO THE WORLD OF CARS!</div>
 </div>
-
-<div class="row">
-
         <!-- FORM CREATE CAR (bên trái) -->
         <div class="sidebar">
             <div class=" panel-default" >
@@ -157,12 +67,10 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
                         <button type="submit" name="create" class="btn btn-primary btn-block">
                             Create
                         </button>
-
                     </form>
                 </div>
             </div>
         </div>
-    
         <!-- LIST CAR (bên phải) -->
         <div class="col-md-8">
             <h2 class="text-center" >WISHLIST CAR</h2>
@@ -190,7 +98,6 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
             ?>
             </div>
         </div>
-    </div>
 </div>
 </body>
 <?php
