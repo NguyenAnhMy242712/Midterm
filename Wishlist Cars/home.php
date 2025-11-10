@@ -8,6 +8,8 @@ if (!isset($_SESSION['username'])) {
 
 $link = mysqli_connect("localhost", "root", "") or die(mysqli_error($link));
 mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
+
+$user_id = $_SESSION['user_id'] ?? 0;
 ?>
 
 <html lang="en">
@@ -28,7 +30,7 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
     </div>
     <div class="top-title">WELCOME TO THE WORLD OF CARS!</div>
 </div>
-        <!-- FORM CREATE CAR -->
+        <!-- FORM CREATE CAR (bên trái) -->
         <div class="sidebar">
             <div class=" panel-default" >
                 <div class="panel-heading"><h3 >Create New Car</h3></div>
@@ -53,7 +55,7 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
 
                         <div class="form-group">
                             <label>Price:</label>
-                            <input type="number" step="1" class="form-control" name="price">
+                            <input type="number" step="1000" class="form-control" name="price">
                         </div>
 
                         <div class="form-group">
@@ -71,18 +73,17 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
                 </div>
             </div>
         </div>
-
-        <!-- LIST CAR -->
+        <!-- LIST CAR (bên phải) -->
         <div class="col-md-8">
             <h2 class="text-center" >WISHLIST CAR</h2>
             <div class="car-container">
                 <?php
-                $res = mysqli_query($link, "SELECT * FROM cars ORDER BY id DESC");
+                $user_id = $_SESSION['user_id'];
+                $res = mysqli_query($link, "SELECT * FROM cars WHERE user_id = $user_id ORDER BY id DESC");
                 while ($row = mysqli_fetch_array($res)) {
                 ?>
                 <div class="car-card" >
                     <img src="<?php echo $row['picture']; ?>"  >
-                    
 
                     <div class="car-info" >
                         <h4><?php echo $row['name']; ?></h4>
@@ -102,27 +103,31 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
         </div>
 </div>
 </body>
-
 <?php
 // INSERT CAR
 if (isset($_POST["create"])) {
 
+    // Lấy thông tin file ảnh
     $picture_name = $_FILES['picture']['name'];
     $tmp = $_FILES['picture']['tmp_name'];
 
-    $path = "cars/" . $picture_name;
+    // Lưu file vào cùng thư mục (vì ảnh và home.php cùng vị trí)
+    move_uploaded_file($tmp, $picture_name);
 
-    move_uploaded_file($tmp, $path);
+    // Lưu tên file (không cần thư mục)
+    $path = $picture_name;
 
+    // Thêm vào CSDL
     mysqli_query($link, "
-        INSERT INTO cars(name, brand, color, price, year, picture)
+        INSERT INTO cars(name, brand, color, price, year, picture, user_id)
         VALUES(
             '$_POST[name]',
             '$_POST[brand]',
             '$_POST[color]',
             '$_POST[price]',
             '$_POST[year]',
-            '$path'
+            '$path',
+            '$user_id'
         )
     ") or die(mysqli_error($link));
     echo "<script>alert('New car created successfully!'); window.location='';</script>";
