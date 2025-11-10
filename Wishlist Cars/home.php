@@ -107,15 +107,12 @@ $user_id = $_SESSION['user_id'] ?? 0;
 // INSERT CAR
 if (isset($_POST["create"])) {
 
-    // Lấy thông tin file ảnh
     $picture_name = $_FILES['picture']['name'];
     $tmp = $_FILES['picture']['tmp_name'];
 
-    // Lưu file vào cùng thư mục (vì ảnh và home.php cùng vị trí)
-    move_uploaded_file($tmp, $picture_name);
+    $path = "cars/" . $picture_name;
 
-    // Lưu tên file (không cần thư mục)
-    $path = $picture_name;
+    move_uploaded_file($tmp, $path);
 
     // Thêm vào CSDL
     mysqli_query($link, "
