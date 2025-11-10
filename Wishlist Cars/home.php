@@ -8,6 +8,8 @@ if (!isset($_SESSION['username'])) {
 
 $link = mysqli_connect("localhost", "root", "") or die(mysqli_error($link));
 mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
+
+$user_id = $_SESSION['user_id'] ?? 0;
 ?>
 
 <html lang="en">
@@ -53,7 +55,7 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
 
                         <div class="form-group">
                             <label>Price:</label>
-                            <input type="number" step="1" class="form-control" name="price">
+                            <input type="number" step="1000" class="form-control" name="price">
                         </div>
 
                         <div class="form-group">
@@ -76,12 +78,12 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
             <h2 class="text-center" >WISHLIST CAR</h2>
             <div class="car-container">
                 <?php
-                $res = mysqli_query($link, "SELECT * FROM cars ORDER BY id DESC");
+                $user_id = $_SESSION['user_id'];
+                $res = mysqli_query($link, "SELECT * FROM cars WHERE user_id = $user_id ORDER BY id DESC");
                 while ($row = mysqli_fetch_array($res)) {
                 ?>
                 <div class="car-card" >
                     <img src="<?php echo $row['picture']; ?>"  >
-                    
 
                     <div class="car-info" >
                         <h4><?php echo $row['name']; ?></h4>
