@@ -105,18 +105,13 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
 // INSERT CAR
 if (isset($_POST["create"])) {
 
-    // Lấy thông tin file ảnh
     $picture_name = $_FILES['picture']['name'];
     $tmp = $_FILES['picture']['tmp_name'];
 
-    // Tạo đường dẫn đầy đủ
     $path = "cars/" . $picture_name;
 
-    // Upload ảnh vào folder cars
     move_uploaded_file($tmp, $path);
 
-
-    // Thêm vào CSDL
     mysqli_query($link, "
         INSERT INTO cars(name, brand, color, price, year, picture)
         VALUES(
