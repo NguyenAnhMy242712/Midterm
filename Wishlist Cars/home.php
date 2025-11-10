@@ -28,7 +28,7 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
     </div>
     <div class="top-title">WELCOME TO THE WORLD OF CARS!</div>
 </div>
-        <!-- FORM CREATE CAR (bên trái) -->
+        <!-- FORM CREATE CAR -->
         <div class="sidebar">
             <div class=" panel-default" >
                 <div class="panel-heading"><h3 >Create New Car</h3></div>
@@ -71,7 +71,8 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
                 </div>
             </div>
         </div>
-        <!-- LIST CAR (bên phải) -->
+
+        <!-- LIST CAR -->
         <div class="col-md-8">
             <h2 class="text-center" >WISHLIST CAR</h2>
             <div class="car-container">
@@ -101,6 +102,7 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
         </div>
 </div>
 </body>
+
 <?php
 // INSERT CAR
 if (isset($_POST["create"])) {
