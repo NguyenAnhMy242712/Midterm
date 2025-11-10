@@ -13,7 +13,7 @@ $color = $row["color"];
 $brand = $row["brand"];
 $price = $row["price"];
 $year = $row["year"];
-$old_picture = $row["picture"]; // Lưu ảnh cũ
+$old_picture = $row["picture"]; 
 ?>
 
 <html lang="en">
