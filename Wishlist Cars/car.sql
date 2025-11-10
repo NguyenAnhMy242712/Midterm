@@ -45,20 +45,21 @@ VALUES
 
 INSERT INTO cars (name, color, brand, picture, price, year, user_id)
 VALUES
-('Toyota Camry', 'White', 'Toyota', 'images1.jpg', 28855, 2020, 1),
-('Honda Civic', 'Black', 'Honda', 'images2.jpg', 20350, 2019, 2),
-('Mazda CX5', 'Red', 'Mazda', 'images3.jpg', 26595, 2021, 3),
-('Hyundai Tucson', 'Blue', 'Hyundai', 'images4.jpeg', 24950, 2022, 4),
-('Ford Ranger', 'Silver', 'Ford', 'images5.jpeg', 27690, 2018, 5),
-('Nissan Altima', 'Gray', 'Nissan', 'images6.jpeg', 25250, 2020, 6),
-('Kia Seltos', 'Orange', 'Kia', 'images7.jpeg', 23690, 2023, 7),
-('Ferrari 812 Superfast', 'Red', 'Ferrari', 'images8.jpeg', 335000, 2024, 8),
-('Lamborghini Aventador', 'Green', 'Lamborghini', 'images9.jpeg', 507353, 2023, 9),
-('Bugatti Chiron', 'Blue', 'Bugatti', 'images10.jpeg', 3300000, 2022, 10),
-('Porsche 911', 'Gray', 'Porsche', 'images11.jpeg', 100550, 2021, 1),
-('Audi A6', 'White', 'Audi', 'images12.jpeg', 54900, 2021, 6),
-('BMW M4', 'Black', 'BMW', 'images13.jpeg', 80875, 2023, 7),
-('Mercedes AMG S63 E', 'White', 'Mercedes-Benz', 'images14.jpeg', 189800, 2024, 8);
+('Toyota Camry', 'White', 'Toyota', 'cars/images1.jpg', 28855, 2020, 1),
+('Honda Civic', 'Black', 'Honda', 'cars/images2.jpg', 20350, 2019, 2),
+('Mazda CX5', 'Red', 'Mazda', 'cars/images3.jpg', 26595, 2021, 3),
+('Hyundai Tucson', 'Blue', 'Hyundai', 'cars/images4.jpeg', 24950, 2022, 4),
+('Ford Ranger', 'Silver', 'Ford', 'cars/images5.jpeg', 27690, 2018, 5),
+('Nissan Altima', 'Gray', 'Nissan', 'cars/images6.jpeg', 25250, 2020, 6),
+('Kia Seltos', 'Orange', 'Kia', 'cars/images7.jpeg', 23690, 2023, 7),
+('Ferrari 812 Superfast', 'Red', 'Ferrari', 'cars/images8.jpeg', 335000, 2024, 8),
+('Lamborghini Aventador', 'Green', 'Lamborghini', 'cars/images9.jpeg', 507353, 2023, 9),
+('Bugatti Chiron', 'Blue', 'Bugatti', 'cars/images10.jpeg', 3300000, 2022, 10),
+('Porsche 911', 'Gray', 'Porsche', 'cars/images11.jpeg', 100550, 2021, 1),
+('Audi A6', 'White', 'Audi', 'cars/images12.jpeg', 54900, 2021, 6),
+('BMW M4', 'Black', 'BMW', 'cars/images13.jpeg', 80875, 2023, 7),
+('Mercedes AMG S63 E', 'White', 'Mercedes-Benz', 'cars/images14.jpeg', 189800, 2024, 8);
+
 
 
 
