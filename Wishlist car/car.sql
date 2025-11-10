@@ -54,7 +54,7 @@ VALUES
 ('Kia Seltos', 'Orange', 'Kia', 'images7.jpeg', 23690, 2023, 7),
 ('Ferrari 812 Superfast', 'Red', 'Ferrari', 'images8.jpeg', 335000, 2024, 8),
 ('Lamborghini Aventador', 'Green', 'Lamborghini', 'images9.jpeg', 507353, 2023, 9),
-('Bugatti Chiron', 'Blue', 'Bugatti', 'images10.jepg', 3300000, 2022, 10),
+('Bugatti Chiron', 'Blue', 'Bugatti', 'images10.jpeg', 3300000, 2022, 10),
 ('Porsche 911', 'Gray', 'Porsche', 'images11.jpeg', 100550, 2021, 1),
 ('Audi A6', 'White', 'Audi', 'images12.jpeg', 54900, 2021, 6),
 ('BMW M4', 'Black', 'BMW', 'images13.jpeg', 80875, 2023, 7),

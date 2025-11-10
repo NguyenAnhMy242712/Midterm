@@ -23,8 +23,7 @@ if (isset($_SESSION['username'])) {
                     <form action="validation.php" method="post">
                         <div class="form-group login__form--username">
                             <label for="username" class="form-label">Username</label>                        
-                            <input type="text" id="username" name="user" class="form-control" required>
-                            
+                            <input type="text" id="username" name="user" class="form-control" required>                            
                         </div>
                         <div class="form-group login__form--password">
                             <label for="password" class="form-label">Password</label>
