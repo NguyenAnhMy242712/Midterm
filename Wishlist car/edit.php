@@ -89,12 +89,17 @@ if (isset($_POST["update"])) {
     // Nếu user upload ảnh mới
     if (!empty($_FILES["picture"]["name"])) {
 
-        $picture_name = $_FILES['picture']['name'];
-        $tmp = $_FILES['picture']['tmp_name'];
+    $new_name = $_FILES['picture']['name'];
+    $tmp = $_FILES['picture']['tmp_name'];
 
-        // Upload file (như create)
-        move_uploaded_file($tmp, $picture_name);
-    }
+    // Lưu vào thư mục cars/
+    $path = "cars/" . $new_name;
+
+    move_uploaded_file($tmp, $path);
+
+    $picture_name = $path;
+}
+
 
     // Update vào database
     mysqli_query($link, "
