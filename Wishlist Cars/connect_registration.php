@@ -1,36 +1,39 @@
 <?php
 session_start();
 
-$con = mysqli_connect('localhost', 'root', '', 'user_car_system');
+/* Kết nối database */
+$con = mysqli_connect('localhost', 'root', '');
+mysqli_select_db($con, "user_car_system");
 
-if (!$con) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+/* Lấy dữ liệu từ form */
+$username    = $_POST['user'];
+$email       = $_POST['email'];
+$password    = $_POST['password'];
+$dob         = $_POST['dob'];
+$nationality = $_POST['nationality'];
+$phone       = $_POST['phonenumber'];
 
-$name = mysqli_real_escape_string($con, $_POST['user']);
-$pass = mysqli_real_escape_string($con, $_POST['password']);
-
-// Kiểm tra username và password
-$s = "SELECT * FROM users WHERE username='$name' AND password='$pass'";
+/* Kiểm tra username đã tồn tại chưa */
+$s = "SELECT * FROM users WHERE username = '$username'";
 $result = mysqli_query($con, $s);
+$num = mysqli_num_rows($result);
 
-if ($result) {
-    if (mysqli_num_rows($result) == 1) {
-        $row = mysqli_fetch_assoc($result);
-        $_SESSION['username'] = $row['username'];
-        $_SESSION['user_id'] = $row['id'];
-
-        header('Location: home.php');
-        exit();
-    } else {
-        echo "<script>
-                alert('Invalid username or password! Please try again.');
-                window.location.href = 'login.php';
-              </script>";
-        exit();
-    }
+if ($num == 1) {
+    // Nếu username đã tồn tại
+    echo "<script>
+            alert('Username already exists! Please try another one.');
+            window.location.href = 'registration.php';
+          </script>";
 } else {
-    echo "SQL Error: " . mysqli_error($con);
+    // Nếu username chưa tồn tại thì thêm người dùng mới
+    $reg = "INSERT INTO users (username, email, password, dob, nationality, phonenumber)
+            VALUES ('$username', '$email', '$password', '$dob', '$nationality', '$phone')";
+    mysqli_query($con, $reg);
+
+    echo "<script>
+            alert('Registration successful! Please login.');
+            window.location.href = 'login.php';
+          </script>";
 }
 
 mysqli_close($con);
