@@ -53,7 +53,7 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
 
                         <div class="form-group">
                             <label>Price:</label>
-                            <input type="number" step="1000" class="form-control" name="price">
+                            <input type="number" step="1" class="form-control" name="price">
                         </div>
 
                         <div class="form-group">
@@ -81,6 +81,7 @@ mysqli_select_db($link, "user_car_system") or die(mysqli_error($link));
                 ?>
                 <div class="car-card" >
                     <img src="<?php echo $row['picture']; ?>"  >
+                    
 
                     <div class="car-info" >
                         <h4><?php echo $row['name']; ?></h4>
@@ -108,11 +109,12 @@ if (isset($_POST["create"])) {
     $picture_name = $_FILES['picture']['name'];
     $tmp = $_FILES['picture']['tmp_name'];
 
-    // Lưu file vào cùng thư mục (vì ảnh và home.php cùng vị trí)
-    move_uploaded_file($tmp, $picture_name);
+    // Tạo đường dẫn đầy đủ
+    $path = "cars/" . $picture_name;
 
-    // Lưu tên file (không cần thư mục)
-    $path = $picture_name;
+    // Upload ảnh vào folder cars
+    move_uploaded_file($tmp, $path);
+
 
     // Thêm vào CSDL
     mysqli_query($link, "
