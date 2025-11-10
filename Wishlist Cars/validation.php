@@ -10,18 +10,25 @@ if (!$con) {
 $name = mysqli_real_escape_string($con, $_POST['user']);
 $pass = mysqli_real_escape_string($con, $_POST['password']);
 
+// Kiểm tra username và password
 $s = "SELECT * FROM users WHERE username='$name' AND password='$pass'";
-
 $result = mysqli_query($con, $s);
 
 if ($result) {
-    $num = mysqli_num_rows($result);
-    if ($num == 1) {
-        $_SESSION['username'] = $_POST['user'];
-        header('location:home.php');
+    if (mysqli_num_rows($result) == 1) {
+        $row = mysqli_fetch_assoc($result);
+
+        // ✅ Lưu thêm user_id để dùng ở home.php
+        $_SESSION['username'] = $row['username'];
+        $_SESSION['user_id'] = $row['id'];
+
+        header('Location: home.php');
         exit();
     } else {
-        header('location:login.php');
+        echo "<script>
+                alert('Invalid username or password! Please try again.');
+                window.location.href = 'login.php';
+              </script>";
         exit();
     }
 } else {
