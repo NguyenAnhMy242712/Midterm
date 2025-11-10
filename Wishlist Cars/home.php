@@ -55,7 +55,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
 
                         <div class="form-group">
                             <label>Price:</label>
-                            <input type="number" step="1000" class="form-control" name="price">
+                            <input type="number" step="1" class="form-control" name="price">
                         </div>
 
                         <div class="form-group">
